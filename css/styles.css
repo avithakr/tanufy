@@ -4,6 +4,8 @@
     --color-headings: #1b0760;
     --color-primary: #2584ff;
     --color-secondary: #00d9ff;
+    --color-border: #ccc;
+    --border-radius: 100px;
   }
 
   *, *::after, *::before{
@@ -162,7 +164,7 @@
 .icon-container {
   align-items: center;
   background: #f3f9fa;
-  border-radius: 100%;
+  border-radius: var(--border-radius);
   display: inline-flex;
   height: 64px;
   justify-content: center;
@@ -172,7 +174,7 @@
 /* Buttons */
 
 .btn{
-  border-radius: 100px;
+  border-radius: var(--border-radius);
   border: 0;
   cursor: pointer;
   font-size: 1.8rem;
@@ -227,8 +229,8 @@
 /* Inputs */
 
 .input{
-  border-radius: 100px;
-  border:  1px solid #ccc;
+  border-radius: var(--border-radius);
+  border:  1px solid var(--color-border);
   color: var(--color-headings);
   font-size: 2rem;
   outline: 0;
@@ -237,6 +239,22 @@
 
 ::placeholder{
   color: #cdcbd7;
+}
+
+.input-group{
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.input-group .input{
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+
+.input-group .btn{
+  margin: 4px;
 }
 
 @media screen and (min-width: 1024px) {
